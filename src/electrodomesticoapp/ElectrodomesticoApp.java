@@ -1,12 +1,19 @@
 package electrodomesticoapp;
 
 import electrodomesticoapp.entities.Electrodomestico;
+import electrodomesticoapp.services.LavadoraService;
+import electrodomesticoapp.services.TelevisorService;
 
 public class ElectrodomesticoApp {
 
     public static void main(String[] args) {
-        Electrodomestico elec = new Electrodomestico(500d, "Blanco", 'C', 20.5d);
-        elec.comprobarConsumoEnergetico();
+        TelevisorService ts = new TelevisorService();
+        
+        LavadoraService ls = new LavadoraService();
+        
+        System.out.println(ls.crearLavadora());
+        
+        //System.out.println(ts.crearTelevisor());
     }
     
 }

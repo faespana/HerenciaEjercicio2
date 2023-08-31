@@ -49,36 +49,8 @@ public class Electrodomestico {
         this.peso = peso;
     }
 
-    public void comprobarConsumoEnergetico() {
-        int ascii = (int) consumoEnergetico;
-        if (!(ascii >= 65 && ascii <= 70)) {
-            System.out.println("La categoria escogida para su electrodomestico es incorrecto, sera automaticamente clasificado como categoria F");
-            setConsumoEnergetico('F');
-
-        }
-    }
-
-    public void comprobarColor() {
-        String aux = color.toLowerCase();
-        switch (aux) {
-            case "blanco":
-                System.out.println("Color " + color + " establecido");
-                break;
-            case "negro":
-                System.out.println("Color " + color + " establecido");
-                break;
-            case "rojo":
-                System.out.println("Color " + color + " establecido");
-                break;
-            case "azul":
-                System.out.println("Color " + color + " establecido");
-                break;
-            case "gris":
-                System.out.println("Color " + color + " establecido");
-                break;
-            default:
-                System.out.println("El color ingresado no esta permitido, su color por defecto sera blanco");
-                setColor("blanco");
-        }
+    @Override
+    public String toString() {
+        return "precio=" + precio + ", color=" + color + ", consumoEnergetico=" + consumoEnergetico + ", peso=" + peso;
     }
 }
